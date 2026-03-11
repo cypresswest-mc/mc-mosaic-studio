@@ -1,106 +1,419 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MC Mosaic Studio</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MC Mosaic Studio | Custom Mosaic Pathways & Garden Art</title>
+<meta name="description" content="Custom mosaic pathways, lawn address signs, pet memorial pieces, and artistic garden features in Greater Vancouver." />
+<meta name="keywords" content="mosaic pathway Vancouver, lawn address sign, pet memorial stone, garden mosaic art, custom outdoor art, Coquitlam mosaic" />
+<meta name="robots" content="index, follow" />
 <style>
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#0a0a0a;color:#fff}
-header{background:#0a0a0a;border-bottom:1px solid #222;position:sticky;top:0}
-.container{max-width:1100px;margin:auto;padding:20px}
-.logo{font-size:22px;font-weight:bold}
-nav a{margin:0 10px;color:#ccc;text-decoration:none}
-.hero{background:url('hero-mosaic-pathway.jpg') center/cover;height:420px;display:flex;align-items:center}
-.hero h1{font-size:40px;margin:0}
-.btn{display:inline-block;margin-top:20px;padding:12px 22px;background:#ff7a00;color:#fff;text-decoration:none;border-radius:6px}
-.section{padding:60px 20px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-.card{background:#111;border:1px solid #222;border-radius:10px;padding:20px}
-.gallery img{width:100%;border-radius:10px}
-.contact{background:#111;border:1px solid #222;border-radius:10px;padding:20px}
-input,textarea{width:100%;padding:10px;margin-top:10px;background:#0a0a0a;border:1px solid #333;color:#fff}
-button{margin-top:15px;padding:12px 20px;background:#ff7a00;border:0;color:#fff;border-radius:6px}
-footer{padding:30px;text-align:center;color:#777}
+  :root{
+    --bg:#070707;
+    --panel:#111111;
+    --panel-2:#171717;
+    --line:#252525;
+    --text:#f4f4f4;
+    --muted:#b7b7b7;
+    --accent:#f47b20;
+    --accent-2:#ff9b4a;
+    --max:1180px;
+    --radius:20px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.55;
+  }
+  img{display:block;max-width:100%}
+  a{text-decoration:none;color:inherit}
+  .container{max-width:var(--max);margin:0 auto;padding:0 24px}
+  header{
+    position:sticky;top:0;z-index:20;
+    background:rgba(7,7,7,.9);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .nav-wrap{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+  .brand{display:flex;align-items:center;gap:14px;font-weight:700;font-size:18px}
+  .brand img{width:46px;height:46px;border-radius:12px;object-fit:cover;background:#000;border:1px solid rgba(255,255,255,.08)}
+  nav{display:flex;gap:24px;flex-wrap:wrap}
+  nav a{color:#d7d7d7;font-size:15px}
+  nav a:hover{color:#fff}
+
+  .hero{
+    min-height:88vh;
+    background:
+      linear-gradient(to right, rgba(0,0,0,.82), rgba(0,0,0,.42)),
+      linear-gradient(to top, rgba(0,0,0,.84), rgba(0,0,0,.08)),
+      url('hero-mosaic-pathway.jpg') center/cover no-repeat;
+    display:flex;align-items:center;
+  }
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:end;padding:74px 0}
+  .eyebrow{
+    display:inline-block;
+    padding:10px 14px;
+    border:1px solid rgba(244,123,32,.28);
+    background:rgba(244,123,32,.08);
+    color:#ffd0ad;
+    border-radius:999px;
+    font-size:13px;
+    letter-spacing:.06em;
+    margin-bottom:18px;
+  }
+  h1{font-size:58px;line-height:1.03;margin:0 0 18px;max-width:760px}
+  .hero p{font-size:18px;color:#dddddd;max-width:640px;margin:0 0 28px}
+  .btns{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{
+    display:inline-block;
+    padding:14px 24px;
+    border-radius:999px;
+    font-weight:700;
+    transition:.2s ease;
+  }
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-primary:hover{background:var(--accent-2)}
+  .btn-secondary{border:1px solid rgba(255,255,255,.16);color:#fff;background:rgba(255,255,255,.04)}
+  .btn-secondary:hover{background:rgba(255,255,255,.1)}
+
+  .hero-card{
+    background:rgba(17,17,17,.78);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:26px;
+    overflow:hidden;
+    box-shadow:0 30px 80px rgba(0,0,0,.35);
+  }
+  .hero-card img{height:460px;width:100%;object-fit:cover}
+
+  section{padding:88px 0}
+  .section-head{max-width:760px;margin-bottom:34px}
+  .kicker{color:#ffb376;text-transform:uppercase;letter-spacing:.22em;font-size:12px;margin-bottom:10px}
+  h2{font-size:38px;line-height:1.1;margin:0 0 12px}
+  .section-head p{margin:0;color:var(--muted);font-size:17px}
+
+  .categories{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .card{
+    background:linear-gradient(180deg,var(--panel),var(--panel-2));
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:26px;
+  }
+  .card h3{margin:0 0 10px;font-size:22px}
+  .card p{margin:0;color:var(--muted)}
+
+  .feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .feature-large,.feature-small{
+    position:relative;
+    overflow:hidden;
+    border-radius:24px;
+    border:1px solid var(--line);
+    background:#0f0f0f;
+  }
+  .feature-large img{height:520px;width:100%;object-fit:cover}
+  .feature-stack{display:grid;gap:22px}
+  .feature-small img{height:249px;width:100%;object-fit:cover}
+  .overlay{
+    position:absolute;left:0;right:0;bottom:0;
+    padding:24px;
+    background:linear-gradient(to top, rgba(0,0,0,.86), rgba(0,0,0,.02));
+  }
+  .overlay span{display:inline-block;font-size:12px;letter-spacing:.16em;color:#ffbc8a;text-transform:uppercase;margin-bottom:8px}
+  .overlay h3{margin:0 0 8px;font-size:28px}
+  .overlay p{margin:0;color:#d6d6d6;max-width:520px}
+
+  .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .gallery-item{
+    background:#101010;
+    border:1px solid var(--line);
+    border-radius:22px;
+    overflow:hidden;
+  }
+  .gallery-item img{height:250px;width:100%;object-fit:cover}
+  .gallery-item .caption{padding:16px 18px;color:#d8d8d8;font-size:14px}
+
+  .split{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:28px;
+    align-items:start;
+  }
+  .about-box,.contact-box,.seo-box{
+    background:linear-gradient(180deg,var(--panel),var(--panel-2));
+    border:1px solid var(--line);
+    border-radius:24px;
+    padding:30px;
+  }
+  .about-box p,.seo-box p,.contact-box p{color:var(--muted)}
+  .bullet-list{display:grid;gap:14px;margin-top:18px}
+  .bullet{padding:14px 16px;border:1px solid rgba(255,255,255,.06);border-radius:14px;background:rgba(255,255,255,.02)}
+
+  .form-grid{display:grid;gap:14px}
+  .form-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  input,select,textarea{
+    width:100%;padding:14px 16px;border-radius:14px;
+    background:#0b0b0b;border:1px solid #2b2b2b;color:#fff;font:inherit;
+  }
+  textarea{min-height:150px;resize:vertical}
+  button{
+    padding:15px 22px;border:0;border-radius:999px;background:var(--accent);color:#fff;
+    font-weight:700;font-size:15px;cursor:pointer;
+  }
+  button:hover{background:var(--accent-2)}
+  .contact-lines{display:grid;gap:12px;margin:20px 0 24px}
+  .contact-line{padding:14px 16px;border-radius:14px;background:#0d0d0d;border:1px solid rgba(255,255,255,.06)}
+
+  footer{padding:30px 0 50px;color:#8c8c8c;text-align:center}
+
+  @media (max-width: 980px){
+    .hero-grid,.feature-grid,.split,.categories,.gallery-grid{grid-template-columns:1fr 1fr}
+    .hero-card img{height:320px}
+    h1{font-size:46px}
+  }
+  @media (max-width: 720px){
+    .hero-grid,.feature-grid,.split,.categories,.gallery-grid,.form-2{grid-template-columns:1fr}
+    nav{gap:14px}
+    h1{font-size:38px}
+    h2{font-size:30px}
+    .hero{min-height:auto}
+    .hero-card img,.feature-large img,.feature-small img,.gallery-item img{height:auto}
+  }
 </style>
 </head>
 <body>
 
 <header>
-<div class="container" style="display:flex;justify-content:space-between;align-items:center">
-<div class="logo">MC Mosaic Studio</div>
-<nav>
-<a href="#services">Services</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
-</nav>
-</div>
+  <div class="container nav-wrap">
+    <div class="brand">
+      <img src="logo.png" alt="MC Mosaic Studio logo" onerror="this.style.display='none'">
+      <span>MC Mosaic Studio</span>
+    </div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#work">Featured Work</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
 <section class="hero">
-<div class="container">
-<h1>Custom Mosaic Pathways & Garden Art</h1>
-<p>Handcrafted mosaic pathways, lawn address signs and outdoor art pieces in Greater Vancouver.</p>
-<a class="btn" href="#gallery">View Work</a>
-</div>
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Custom Mosaic Pathways • Garden Art • Pet Memorials</div>
+      <h1>Artful outdoor spaces with a custom mosaic signature.</h1>
+      <p>MC Mosaic Studio creates custom mosaic pathways, lawn address signs, pet memorial pieces, garden features, and artistic outdoor accents for homeowners in Greater Vancouver.</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="#gallery">View Portfolio</a>
+        <a class="btn btn-secondary" href="#contact">Request a Quote</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <img src="garden2.jpg" alt="Custom front yard mosaic pathway project">
+    </div>
+  </div>
 </section>
 
-<section id="services" class="section container">
-<h2>Services</h2>
-<div class="grid">
-<div class="card">
-<h3>Mosaic Pathways</h3>
-<p>Custom artistic pathways that turn a walkway into a feature.</p>
-</div>
-<div class="card">
-<h3>Lawn Address Signs</h3>
-<p>Handmade mosaic address signs for unique curb appeal.</p>
-</div>
-<div class="card">
-<h3>Garden Features</h3>
-<p>Outdoor mosaic tables, focal pieces and garden art.</p>
-</div>
-<div class="card">
-<h3>Pet Memorial</h3>
-<p>Memorial stepping stones and garden tributes.</p>
-</div>
-</div>
+<section id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Project Categories</div>
+      <h2>Distinctive outdoor work for clients who want more than standard landscaping.</h2>
+      <p>Each project is designed to feel personal, memorable, and visually integrated with the home and garden.</p>
+    </div>
+    <div class="categories">
+      <div class="card">
+        <h3>Mosaic Pathways</h3>
+        <p>Artistic walkways that turn a simple entrance or garden path into a standout feature.</p>
+      </div>
+      <div class="card">
+        <h3>Lawn Address Signs</h3>
+        <p>Custom curb-appeal pieces that combine mosaic, wood, stone, and modern outdoor styling.</p>
+      </div>
+      <div class="card">
+        <h3>Garden Features</h3>
+        <p>Backyard accents, decorative focal points, outdoor tables, and feature installations.</p>
+      </div>
+      <div class="card">
+        <h3>Pet Memorial Art</h3>
+        <p>Thoughtful stepping stones, markers, and memorial garden pieces created with warmth and care.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="gallery" class="section container">
-<h2>Gallery</h2>
-<div class="grid gallery">
-<img src="mosaic-pathway.jpg" alt="Mosaic pathway">
-<img src="address-sign1.jpg" alt="Address sign 1">
-<img src="address-sign2.jpg" alt="Address sign 2">
-<img src="address-sign3.jpg" alt="Address sign 3">
-<img src="outdoor-table.jpg" alt="Outdoor mosaic table">
-<img src="garden1.jpg" alt="Garden project 1">
-<img src="garden2.jpg" alt="Garden project 2">
-<img src="paw-stone.jpg" alt="Paw stepping stone">
-<img src="pet-memorial1.jpg" alt="Pet memorial 1">
-<img src="pet-memorial2.jpg" alt="Pet memorial 2">
-</div>
+<section id="work">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Featured Work</div>
+      <h2>A cleaner, higher-end presentation for your signature categories.</h2>
+      <p>This layout is meant to feel closer to a premium landscape studio or custom design brand.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-large">
+        <img src="mosaic-pathway.jpg" alt="Mosaic pathway through lush garden">
+        <div class="overlay">
+          <span>Signature Pathways</span>
+          <h3>Mosaic Walkway Design</h3>
+          <p>Custom pathways that bring texture, artistry, and a strong first impression to the front or back yard.</p>
+        </div>
+      </div>
+      <div class="feature-stack">
+        <div class="feature-small">
+          <img src="address-sign1.jpg" alt="Custom mosaic lawn address sign">
+          <div class="overlay">
+            <span>Curb Appeal</span>
+            <h3>Address Signs</h3>
+            <p>Distinctive front yard pieces that help a home stand out.</p>
+          </div>
+        </div>
+        <div class="feature-small">
+          <img src="pet-memorial1.jpg" alt="Pet memorial garden stepping stone project">
+          <div class="overlay">
+            <span>Memorial Work</span>
+            <h3>Pet Memorial Gardens</h3>
+            <p>Meaningful spaces for remembrance, story, and comfort.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="contact" class="section container">
-<h2>Contact</h2>
-<div class="contact">
-<p>Phone: (604) 889‑1861</p>
-<p>Email: mcfrontier888@gmail.com</p>
-<p>Location: Coquitlam, Greater Vancouver</p>
-<form>
-<input placeholder="Name">
-<input placeholder="Email">
-<textarea placeholder="Tell me about your project"></textarea>
-<button>Send Inquiry</button>
-</form>
-</div>
+<section id="gallery">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">High-End Gallery</div>
+      <h2>Selected portfolio work across pathways, address signs, outdoor features, and memorial pieces.</h2>
+      <p>Use this section to show range, quality, and the overall design direction of your studio.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="mosaic-pathway.jpg" alt="Mosaic pathway project">
+        <div class="caption">Mosaic pathway concept</div>
+      </div>
+      <div class="gallery-item">
+        <img src="address-sign1.jpg" alt="Address sign one">
+        <div class="caption">Stone and mosaic lawn address sign</div>
+      </div>
+      <div class="gallery-item">
+        <img src="address-sign2.jpg" alt="Address sign two">
+        <div class="caption">Modern wood and tile address sign</div>
+      </div>
+      <div class="gallery-item">
+        <img src="address-sign3.jpg" alt="Address sign three">
+        <div class="caption">Decorative address feature</div>
+      </div>
+      <div class="gallery-item">
+        <img src="outdoor-table.jpg" alt="Outdoor mosaic table">
+        <div class="caption">Outdoor dining table feature</div>
+      </div>
+      <div class="gallery-item">
+        <img src="garden1.jpg" alt="Backyard garden feature">
+        <div class="caption">Backyard garden and pathway styling</div>
+      </div>
+      <div class="gallery-item">
+        <img src="garden2.jpg" alt="Front yard garden pathway">
+        <div class="caption">Front yard garden mosaic entrance</div>
+      </div>
+      <div class="gallery-item">
+        <img src="paw-stone.jpg" alt="Pet paw stepping stone">
+        <div class="caption">Custom paw print stepping stone</div>
+      </div>
+      <div class="gallery-item">
+        <img src="pet-memorial1.jpg" alt="Pet memorial feature one">
+        <div class="caption">Pet memorial stepping stone garden</div>
+      </div>
+      <div class="gallery-item">
+        <img src="pet-memorial2.jpg" alt="Pet memorial feature two">
+        <div class="caption">Memorial corner with custom marker</div>
+      </div>
+      <div class="gallery-item">
+        <img src="hero-mosaic-pathway.jpg" alt="Hero mosaic pathway">
+        <div class="caption">Evening front yard presentation</div>
+      </div>
+      <div class="gallery-item">
+        <img src="garden1.jpg" alt="Custom backyard atmosphere">
+        <div class="caption">Outdoor lifestyle atmosphere</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container split">
+    <div class="about-box">
+      <div class="kicker">About MC Mosaic Studio</div>
+      <h2>Custom outdoor art with warmth, craftsmanship, and story.</h2>
+      <p>MC Mosaic Studio is positioned as a custom creative outdoor brand rather than a generic contractor site. The goal is to attract homeowners who value detail, originality, and pieces that feel personal to their space.</p>
+      <div class="bullet-list">
+        <div class="bullet">Custom mosaic pathways and artistic entrances</div>
+        <div class="bullet">Lawn address signs designed for curb appeal</div>
+        <div class="bullet">Pet memorial stepping stones and remembrance spaces</div>
+        <div class="bullet">Outdoor tables, garden features, and one-of-a-kind commissions</div>
+      </div>
+    </div>
+    <div class="seo-box">
+      <div class="kicker">Google SEO Focus</div>
+      <h2>Built to support search terms local clients may use.</h2>
+      <p>This homepage is written around keyword themes such as:</p>
+      <div class="bullet-list">
+        <div class="bullet">mosaic pathway Vancouver</div>
+        <div class="bullet">custom lawn address sign</div>
+        <div class="bullet">pet memorial stone Vancouver</div>
+        <div class="bullet">garden mosaic art Greater Vancouver</div>
+        <div class="bullet">custom outdoor art Coquitlam</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container split">
+    <div class="contact-box">
+      <div class="kicker">Contact</div>
+      <h2>Request a quote for your project.</h2>
+      <p>Available for custom mosaic pathways, lawn address signs, pet memorial pieces, and select artistic outdoor projects in Greater Vancouver.</p>
+      <div class="contact-lines">
+        <div class="contact-line"><strong>Phone:</strong> (604) 889-1861</div>
+        <div class="contact-line"><strong>Email:</strong> mcfrontier888@gmail.com</div>
+        <div class="contact-line"><strong>Location:</strong> Coquitlam, Greater Vancouver</div>
+        <div class="contact-line"><strong>Instagram:</strong> @mcmosaicstudio</div>
+      </div>
+    </div>
+    <div class="contact-box">
+      <div class="kicker">Inquiry Form</div>
+      <h2>Tell me about your space.</h2>
+      <form action="mailto:mcfrontier888@gmail.com" method="post" enctype="text/plain">
+        <div class="form-grid">
+          <div class="form-2">
+            <input type="text" name="Name" placeholder="Name" required>
+            <input type="text" name="Phone" placeholder="Phone">
+          </div>
+          <input type="email" name="Email" placeholder="Email" required>
+          <select name="Project Type">
+            <option value="">Project Type</option>
+            <option>Mosaic Pathway</option>
+            <option>Lawn Address Sign</option>
+            <option>Outdoor Feature</option>
+            <option>Pet Memorial</option>
+            <option>Other</option>
+          </select>
+          <textarea name="Message" placeholder="Tell me about your project, dimensions, style, or ideas"></textarea>
+          <button type="submit">Send Inquiry</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </section>
 
 <footer>
-© MC Mosaic Studio
+  © MC Mosaic Studio • Custom Mosaic Pathways & Garden Art in Greater Vancouver
 </footer>
 
 </body>
 </html>
-
