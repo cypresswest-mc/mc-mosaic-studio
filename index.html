@@ -40,7 +40,7 @@
   }
   .nav-wrap{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
   .brand{display:flex;align-items:center;gap:14px;font-weight:700;font-size:18px}
-  .brand img{width:46px;height:46px;border-radius:12px;object-fit:cover;background:#000;border:1px solid rgba(255,255,255,.08)}
+  .brand img{width:64px;height:64px;border-radius:16px;object-fit:cover;background:#000;border:1px solid rgba(255,255,255,.08);padding:4px;box-shadow:0 10px 24px rgba(0,0,0,.28)}
   nav{display:flex;gap:24px;flex-wrap:wrap}
   nav a{color:#d7d7d7;font-size:15px}
   nav a:hover{color:#fff}
@@ -141,7 +141,7 @@
     gap:28px;
     align-items:start;
   }
-  .about-box,.contact-box,.seo-box{
+  .about-box,.contact-box,.seo-box,.about-story-box,.about-values-box{
     background:linear-gradient(180deg,var(--panel),var(--panel-2));
     border:1px solid var(--line);
     border-radius:24px;
@@ -167,6 +167,20 @@
   .contact-line{padding:14px 16px;border-radius:14px;background:#0d0d0d;border:1px solid rgba(255,255,255,.06)}
 
   footer{padding:30px 0 50px;color:#8c8c8c;text-align:center}
+  .about-strong{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;margin-bottom:28px}
+  .about-story-box,.about-values-box{
+    background:linear-gradient(180deg,var(--panel),var(--panel-2));
+    border:1px solid var(--line);
+    border-radius:24px;
+    padding:30px;
+  }
+  .about-story-box p,.about-values-box p{color:var(--muted)}
+  .about-badges{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0 0}
+  .about-badge{padding:10px 14px;border-radius:999px;background:rgba(244,123,32,.08);border:1px solid rgba(244,123,32,.2);color:#ffd0ad;font-size:13px}
+  .values-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
+  .value-card{padding:18px;border:1px solid rgba(255,255,255,.06);border-radius:16px;background:rgba(255,255,255,.02)}
+  .value-card h3{margin:0 0 8px;font-size:18px}
+  .value-card p{margin:0;font-size:14px}
 
   @media (max-width: 980px){
     .hero-grid,.feature-grid,.split,.categories,.gallery-grid{grid-template-columns:1fr 1fr}
@@ -174,7 +188,14 @@
     h1{font-size:46px}
   }
   @media (max-width: 720px){
-    .hero-grid,.feature-grid,.split,.categories,.gallery-grid,.form-2{grid-template-columns:1fr}
+    .hero-grid,.feature-grid,.split,.categories,.gallery-grid,.form-2,.about-strong,.values-grid{grid-template-columns:1fr}
+    nav{gap:14px}
+    h1{font-size:38px}
+    h2{font-size:30px}
+    .hero{min-height:auto}
+    .hero-card img,.feature-large img,.feature-small img,.gallery-item img{height:auto}
+    .brand img{width:54px;height:54px}
+  }
     nav{gap:14px}
     h1{font-size:38px}
     h2{font-size:30px}
@@ -345,28 +366,74 @@
 </section>
 
 <section id="about">
-  <div class="container split">
-    <div class="about-box">
+  <div class="container">
+    <div class="section-head">
       <div class="kicker">About MC Mosaic Studio</div>
-      <h2>Custom outdoor art with warmth, craftsmanship, and story.</h2>
-      <p>MC Mosaic Studio is positioned as a custom creative outdoor brand rather than a generic contractor site. The goal is to attract homeowners who value detail, originality, and pieces that feel personal to their space.</p>
-      <div class="bullet-list">
-        <div class="bullet">Custom mosaic pathways and artistic entrances</div>
-        <div class="bullet">Lawn address signs designed for curb appeal</div>
-        <div class="bullet">Pet memorial stepping stones and remembrance spaces</div>
-        <div class="bullet">Outdoor tables, garden features, and one-of-a-kind commissions</div>
+      <h2>A more personal outdoor brand built around custom detail, warmth, and lasting meaning.</h2>
+      <p>This section is written to help visitors understand not only what you make, but why your work feels different from standard landscaping or off-the-shelf outdoor decor.</p>
+    </div>
+
+    <div class="about-strong">
+      <div class="about-story-box">
+        <div class="kicker">Studio Story</div>
+        <h2>Custom outdoor art with craftsmanship, story, and a stronger emotional connection.</h2>
+        <p>MC Mosaic Studio is positioned as a custom creative outdoor brand rather than a generic contractor site. The focus is on pieces that feel personal to the home, the garden, and the people who live there.</p>
+        <p>From mosaic pathways and lawn address signs to pet memorial stepping stones and feature pieces, the goal is to create work that adds identity, warmth, and a sense of permanence to outdoor spaces.</p>
+        <div class="about-badges">
+          <span class="about-badge">Custom-built</span>
+          <span class="about-badge">Design-driven</span>
+          <span class="about-badge">Garden-focused</span>
+          <span class="about-badge">Meaningful pieces</span>
+        </div>
+      </div>
+      <div class="about-values-box">
+        <div class="kicker">Why It Stands Out</div>
+        <h2>Made for homeowners who want something more distinctive than standard finishes.</h2>
+        <p>Instead of blending into the background, these pieces are meant to become part of the character of the property — whether that means improving curb appeal, creating a memorable garden path, or building a quiet place of remembrance.</p>
+        <div class="values-grid">
+          <div class="value-card">
+            <h3>Artistic identity</h3>
+            <p>Work designed to feel unique to the home instead of looking mass-produced.</p>
+          </div>
+          <div class="value-card">
+            <h3>Outdoor character</h3>
+            <p>Features that bring texture, color, and visual focus into the landscape.</p>
+          </div>
+          <div class="value-card">
+            <h3>Personal meaning</h3>
+            <p>Especially suited for memorial work and one-of-a-kind commissions.</p>
+          </div>
+          <div class="value-card">
+            <h3>Premium presentation</h3>
+            <p>A cleaner, more design-led alternative to standard contractor-style details.</p>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="seo-box">
-      <div class="kicker">Google SEO Focus</div>
-      <h2>Built to support search terms local clients may use.</h2>
-      <p>This homepage is written around keyword themes such as:</p>
-      <div class="bullet-list">
-        <div class="bullet">mosaic pathway Vancouver</div>
-        <div class="bullet">custom lawn address sign</div>
-        <div class="bullet">pet memorial stone Vancouver</div>
-        <div class="bullet">garden mosaic art Greater Vancouver</div>
-        <div class="bullet">custom outdoor art Coquitlam</div>
+
+    <div class="split">
+      <div class="about-box">
+        <div class="kicker">What Clients Can Ask For</div>
+        <h2>Core project types that fit the brand.</h2>
+        <p>These categories help visitors quickly understand the range of custom work available.</p>
+        <div class="bullet-list">
+          <div class="bullet">Custom mosaic pathways and artistic entrances</div>
+          <div class="bullet">Lawn address signs designed for curb appeal</div>
+          <div class="bullet">Pet memorial stepping stones and remembrance spaces</div>
+          <div class="bullet">Outdoor tables, garden features, and one-of-a-kind commissions</div>
+        </div>
+      </div>
+      <div class="seo-box">
+        <div class="kicker">Google SEO Focus</div>
+        <h2>Built to support search terms local clients may use.</h2>
+        <p>This homepage is written around keyword themes such as:</p>
+        <div class="bullet-list">
+          <div class="bullet">mosaic pathway Vancouver</div>
+          <div class="bullet">custom lawn address sign</div>
+          <div class="bullet">pet memorial stone Vancouver</div>
+          <div class="bullet">garden mosaic art Greater Vancouver</div>
+          <div class="bullet">custom outdoor art Coquitlam</div>
+        </div>
       </div>
     </div>
   </div>
