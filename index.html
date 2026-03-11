@@ -53,22 +53,22 @@
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding:14px 0;
     gap:20px;
+    padding:12px 0;
   }
 
   .brand{
     display:flex;
     align-items:center;
-    gap:14px;
+    gap:16px;
     min-width:0;
   }
 
   .brand img{
-    width:64px;
-    height:64px;
+    width:96px;
+    height:96px;
+    border-radius:18px;
     object-fit:cover;
-    border-radius:16px;
     background:#000;
     border:1px solid rgba(255,255,255,.08);
     padding:4px;
@@ -83,20 +83,18 @@
   }
 
   .brand-title{
-    font-size:18px;
+    font-size:20px;
     font-weight:700;
     line-height:1.1;
     color:#fff;
-    letter-spacing:.01em;
   }
 
   .brand-sub{
-    font-size:11px;
+    font-size:12px;
     color:#cfcfcf;
     text-transform:uppercase;
     letter-spacing:.18em;
     margin-top:4px;
-    white-space:nowrap;
   }
 
   nav{
@@ -325,6 +323,12 @@
     border:1px solid var(--line);
     border-radius:22px;
     overflow:hidden;
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+
+  .gallery-item:hover{
+    transform:translateY(-4px);
+    box-shadow:0 18px 36px rgba(0,0,0,.28);
   }
 
   .gallery-item img{
@@ -353,7 +357,11 @@
     padding:30px;
   }
 
-  .about-box p,.seo-box p,.contact-box p,.about-story-box p,.about-values-box p{
+  .about-box p,
+  .seo-box p,
+  .contact-box p,
+  .about-story-box p,
+  .about-values-box p{
     color:var(--muted);
   }
 
@@ -521,12 +529,16 @@
     }
 
     .brand img{
-      width:54px;
-      height:54px;
+      width:72px;
+      height:72px;
+    }
+
+    .brand-title{
+      font-size:18px;
     }
 
     .brand-sub{
-      white-space:normal;
+      font-size:11px;
       letter-spacing:.12em;
     }
   }
@@ -540,7 +552,7 @@
       <img src="https://raw.githubusercontent.com/cypresswest-mc/mc-mosaic-studio/main/logo.png" alt="MC Mosaic Studio logo">
       <div class="brand-text">
         <span class="brand-title">MC Mosaic Studio</span>
-        <span class="brand-sub">Creating art, piece by piece</span>
+        <span class="brand-sub">Creating Art, Piece by Piece</span>
       </div>
     </div>
     <nav>
