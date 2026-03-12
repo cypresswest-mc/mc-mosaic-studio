@@ -228,6 +228,17 @@
   button:hover{background:var(--accent-2);transform:translateY(-2px)}
   .contact-lines{display:grid;gap:12px;margin:20px 0 24px}
   .contact-line{padding:14px 16px;border-radius:14px;background:#0d0d0d;border:1px solid rgba(255,255,255,.06)}
+  .trust-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .trust-item{padding:18px 20px;border-radius:18px;background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid var(--line);text-align:center}
+  .trust-item strong{display:block;font-size:26px;margin-bottom:6px;color:#fff}
+  .trust-item span{color:var(--muted);font-size:14px}
+  .faq-grid{display:grid;gap:14px}
+  .faq-item{padding:22px;border-radius:18px;background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid var(--line)}
+  .faq-item h3{margin:0 0 8px;font-size:20px}
+  .faq-item p{margin:0;color:var(--muted)}
+  .cta-band{padding:34px;border-radius:28px;background:linear-gradient(135deg,rgba(244,123,32,.18),rgba(255,255,255,.04));border:1px solid rgba(244,123,32,.2);display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .cta-band h2{margin:0;font-size:34px}
+  .cta-band p{margin:8px 0 0;color:#ddd;max-width:720px}
 
   footer{padding:30px 0 50px;color:#8c8c8c;text-align:center}
 
@@ -240,14 +251,16 @@
   .value-card p{margin:0;font-size:14px}
 
   @media (max-width: 980px){
-    .hero-grid,.feature-grid,.split,.categories,.gallery-grid,.before-after{grid-template-columns:1fr 1fr}
+    .hero-grid,.feature-grid,.split,.categories,.gallery-grid,.before-after,.trust-strip{grid-template-columns:1fr 1fr}
     .hero-card img{height:360px}
     h1{font-size:50px}
     .brand img{width:108px;height:108px}
   }
 
   @media (max-width: 720px){
-    .hero-grid,.feature-grid,.split,.categories,.gallery-grid,.form-2,.about-strong,.values-grid,.before-after{grid-template-columns:1fr}
+    .hero-grid,.feature-grid,.split,.categories,.gallery-grid,.form-2,.about-strong,.values-grid,.before-after,.trust-strip{grid-template-columns:1fr}
+    .cta-band{flex-direction:column;align-items:flex-start}
+    .cta-band h2{font-size:28px}
     .nav-wrap{flex-direction:column;align-items:flex-start}
     nav{gap:14px;justify-content:flex-start}
     h1{font-size:38px}
@@ -310,6 +323,22 @@
       <div class="card"><h3>Port Moody</h3><p>Outdoor art details that add character and a stronger sense of place.</p></div>
       <div class="card"><h3>Burnaby</h3><p>Distinctive front yard and backyard features for design-conscious homeowners.</p></div>
       <div class="card"><h3>Greater Vancouver</h3><p>Select custom commissions for homeowners looking for one-of-a-kind outdoor work.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Studio Highlights</div>
+      <h2>A more design-led alternative to standard outdoor finishes.</h2>
+      <p>This section quickly tells visitors why your work feels more custom, artistic, and memorable than off-the-shelf options.</p>
+    </div>
+    <div class="trust-strip">
+      <div class="trust-item"><strong>Custom</strong><span>Every project is shaped around the space, style, and story behind it.</span></div>
+      <div class="trust-item"><strong>Artful</strong><span>Mosaic details turn practical outdoor elements into focal points.</span></div>
+      <div class="trust-item"><strong>Meaningful</strong><span>Especially suited for remembrance pieces and one-of-a-kind commissions.</span></div>
+      <div class="trust-item"><strong>Local</strong><span>Designed for homeowners across Coquitlam and Greater Vancouver.</span></div>
     </div>
   </div>
 </section>
@@ -597,6 +626,47 @@
           <p>The final result is meant to improve curb appeal, atmosphere, and long-term visual identity.</p>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Frequently Asked Questions</div>
+      <h2>Helpful answers for first-time clients.</h2>
+      <p>This section reduces hesitation and helps visitors understand how custom work usually begins.</p>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3>Do I need a full design before reaching out?</h3>
+        <p>No. A few photos of the space, rough dimensions, and your general idea are enough to start the conversation.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can projects be customized to match the house and garden style?</h3>
+        <p>Yes. Color, shape, material direction, and overall character can all be guided by the property and the feeling you want to create.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is pet memorial work treated differently from general outdoor decor?</h3>
+        <p>Yes. Memorial projects are handled as more personal pieces, with extra attention to tone, symbolism, and emotional meaning.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can smaller custom pieces be made without a full landscape project?</h3>
+        <p>Yes. Address signs, tribute stones, and select feature pieces can work as standalone commissions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="cta-band">
+      <div>
+        <div class="kicker">Ready To Start</div>
+        <h2>Bring a more personal outdoor feature into your home or garden.</h2>
+        <p>Whether you are planning a mosaic pathway, lawn address sign, memorial corner, or custom feature piece, the first step can be as simple as sharing a few photos and ideas.</p>
+      </div>
+      <a class="btn btn-primary" href="#contact">Request a Quote</a>
     </div>
   </div>
 </section>
