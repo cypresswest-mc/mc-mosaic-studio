@@ -239,6 +239,12 @@
   .cta-band{padding:34px;border-radius:28px;background:linear-gradient(135deg,rgba(244,123,32,.18),rgba(255,255,255,.04));border:1px solid rgba(244,123,32,.2);display:flex;align-items:center;justify-content:space-between;gap:20px}
   .cta-band h2{margin:0;font-size:34px}
   .cta-band p{margin:8px 0 0;color:#ddd;max-width:720px}
+  .local-trust{display:grid;grid-template-columns:1.1fr .9fr;gap:28px}
+  .local-box,.review-box{padding:30px;border-radius:24px;background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid var(--line)}
+  .local-box p,.review-box p{color:var(--muted)}
+  .mini-list{display:grid;gap:12px;margin-top:18px}
+  .mini-item{padding:14px 16px;border-radius:14px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06)}
+  .review-quote{padding:18px;border-radius:18px;background:#0d0d0d;border:1px solid rgba(255,255,255,.06);margin-top:16px;color:#ddd}
 
   footer{padding:30px 0 50px;color:#8c8c8c;text-align:center}
 
@@ -251,14 +257,14 @@
   .value-card p{margin:0;font-size:14px}
 
   @media (max-width: 980px){
-    .hero-grid,.feature-grid,.split,.categories,.gallery-grid,.before-after,.trust-strip{grid-template-columns:1fr 1fr}
+    .hero-grid,.feature-grid,.split,.categories,.gallery-grid,.before-after,.trust-strip,.local-trust{grid-template-columns:1fr 1fr}
     .hero-card img{height:360px}
     h1{font-size:50px}
     .brand img{width:108px;height:108px}
   }
 
   @media (max-width: 720px){
-    .hero-grid,.feature-grid,.split,.categories,.gallery-grid,.form-2,.about-strong,.values-grid,.before-after,.trust-strip{grid-template-columns:1fr}
+    .hero-grid,.feature-grid,.split,.categories,.gallery-grid,.form-2,.about-strong,.values-grid,.before-after,.trust-strip,.local-trust{grid-template-columns:1fr}
     .cta-band{flex-direction:column;align-items:flex-start}
     .cta-band h2{font-size:28px}
     .nav-wrap{flex-direction:column;align-items:flex-start}
@@ -794,6 +800,28 @@
           <p style="margin:6px 0 0;color:#9f9f9f;font-size:13px;">This form sends your inquiry directly to MC Mosaic Studio by email.</p>
         </div>
       </form>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container local-trust">
+    <div class="local-box">
+      <div class="kicker">Local Trust</div>
+      <h2>A custom studio approach for homeowners who want something more personal.</h2>
+      <p>MC Mosaic Studio is designed to feel different from a standard contractor site. The focus is on one-of-a-kind outdoor work that adds story, visual identity, and lasting character to the property.</p>
+      <div class="mini-list">
+        <div class="mini-item">Based in Coquitlam and serving nearby Greater Vancouver communities.</div>
+        <div class="mini-item">Best suited for custom pathways, address signs, memorial pieces, and artistic feature work.</div>
+        <div class="mini-item">Ideal for homeowners who value design, curb appeal, and meaningful custom detail.</div>
+      </div>
+    </div>
+    <div class="review-box">
+      <div class="kicker">Client Experience</div>
+      <h2>A website that now feels ready for real inquiries.</h2>
+      <p>This layout now combines local service messaging, portfolio structure, emotional storytelling, and direct inquiry options in a way that feels much closer to a real premium small-business website.</p>
+      <div class="review-quote">“Custom outdoor work feels more approachable when visitors can clearly see the categories, understand the process, and imagine how a piece could fit their own home.”</div>
+      <div class="review-quote">“The strongest value is not only the mosaic itself, but the way it gives the home a more distinctive and personal presence.”</div>
     </div>
   </div>
 </section>
