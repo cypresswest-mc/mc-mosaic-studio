@@ -771,8 +771,10 @@
     <div class="contact-box">
       <div class="kicker">Inquiry Form</div>
       <h2>Tell me about your space.</h2>
-      <form action="mailto:mcfrontier888@gmail.com" method="post" enctype="text/plain">
-        <!-- For a better live form later, replace this mailto form with Formspree or Web3Forms. -->
+      <form action="https://formsubmit.co/mcfrontier888@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New inquiry from MC Mosaic Studio website">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
         <div class="form-grid">
           <div class="form-2">
             <input type="text" name="Name" placeholder="Name" required>
@@ -789,6 +791,7 @@
           </select>
           <textarea name="Message" placeholder="Tell me about your project, dimensions, style, or ideas"></textarea>
           <button type="submit">Send Inquiry</button>
+          <p style="margin:6px 0 0;color:#9f9f9f;font-size:13px;">This form sends your inquiry directly to MC Mosaic Studio by email.</p>
         </div>
       </form>
     </div>
